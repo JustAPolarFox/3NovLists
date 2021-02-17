@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfLists.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLists"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="600" FontSize="24">
+    <Grid>
+        <TabControl>
+            <TabItem Header="ListBox">
+                <ListBox x:Name="listBox" SelectionChanged="listBox_SelectionChanged">
+                    <TextBlock FontWeight="Bold" TextDecorations="Underline" Text="Новинки 2015 года" />
+                    <ListBoxItem >LG Nexus 5X</ListBoxItem>
+                    <ListBoxItem>Huawei Nexus 6P</ListBoxItem>
+                    <ListBoxItem>iPhone 6S</ListBoxItem>
+                    <ListBoxItem>iPhone 6S Plus</ListBoxItem>
+                    <ListBoxItem>Аsus Zenphone 2</ListBoxItem>
+                    <ListBoxItem>Microsoft Lumia 950</ListBoxItem>
+                </ListBox>
+            </TabItem>
+
+            <TabItem Header="ComboBox">
+                <ComboBox x:Name="phonesCombo" SelectionChanged="phonesCombo_SelectionChanged" VerticalAlignment="Top">
+                    <ComboBoxItem >LG Nexus 5X</ComboBoxItem>
+                    <ComboBoxItem>Huawei Nexus 6P</ComboBoxItem>
+                    <ComboBoxItem>iPhone 6S</ComboBoxItem>
+                    <ComboBoxItem>iPhone 6S Plus</ComboBoxItem>
+                    <ComboBoxItem>Аsus Zenphone 2</ComboBoxItem>
+                    <ComboBoxItem>Microsoft Lumia 950</ComboBoxItem>
+                </ComboBox>
+            </TabItem>
+
+            <TabItem Header="ImageBox">
+                <ListBox x:Name="img" VerticalAlignment="Top">
+                    <ListBoxItem Margin="3">
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <Image Source="Images/heart.png" Width="60" />
+                            <TextBlock Margin="30,0,0,0">heart.png</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Image Source="Images/apple1.png" Width="60" />
+                        <TextBlock Margin="30,0,0,0">apple1.png</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Image Source="Images/book2.png" Width="60" />
+                        <TextBlock Margin="30,0,0,0">book2.png</TextBlock>
+                    </StackPanel>
+                </ListBox>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
